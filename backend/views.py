@@ -204,11 +204,11 @@ class AudioView(APIView):
                     subject = "Submitted Audio"
                     email_template_name = "backend/audio.txt"
                     c = {
-                    'domain':'127.0.0.1:8000/',
+                    'domain':'ielt.herokuapp.com',
                     "email":Email,
                     "first_name":first_name,
                     "last_name":last_name,
-                    'protocol': 'http',
+                    'protocol': 'https',
                     "url": AudioUrl,
                     }
                     email = render_to_string(email_template_name, c)
