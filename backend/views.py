@@ -204,7 +204,7 @@ class AudioView(APIView):
                     subject = "Submitted Audio"
                     email_template_name = "backend/audio.txt"
                     c = {
-                    'domain':'ielt.herokuapp.com',
+                    'domain':'ielt.herokuapp.com/',
                     "email":Email,
                     "first_name":first_name,
                     "last_name":last_name,
