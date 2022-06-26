@@ -215,7 +215,7 @@ class AudioView(APIView):
                     try:
                         send_mail(subject, email, 'sodiqb86@gmail.com' , ['sodiqb86@gmail.com'], fail_silently=False)
                     except BadHeaderError:
-                        return Response("Invalid header found", status=status.HTTP_400_BAD_REQUEST)
+                        return Response("Invalid header found.", status=status.HTTP_400_BAD_REQUEST)
                     return Response("Audio Uploaded", status=status.HTTP_200_OK)
             except:
                 return Response("Wrong Email Address", status=status.HTTP_400_BAD_REQUEST)
