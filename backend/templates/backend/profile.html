@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <h1>PROFILE VIEW</h1>
+    <form method = "post">
+        {% csrf_token %}
+    <div>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value={{profile.first_name}}>
+    </div>
+    <div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value={{profile.last_name}}>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="{{profile.email}}">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="{{profile.phone}}">
+    </div>
+    <div>
+        <label for="zip_code">Zip Code:</label>
+        <input type="text" id="zip_code" name="zip_code" value="{{profile.zip_code}}">
+    </div>
+    <div>
+        <label for="city">city:</label>
+        <input type="text" id="city" name="city" value="{{profile.city}}">
+    </div>
+    <div>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" value="{{profile.state}}">
+    </div>
+    <div>
+        <label for="score">Score:</label>
+        <input type="text" id="score" name="score" value={{profile.score}}>
+    </div>
+    
+    <button type="submit">Update</button>
+
+</form>
+</body>
+</html>
