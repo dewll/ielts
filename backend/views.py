@@ -114,9 +114,9 @@ class CheckEmailView(APIView):
                 email_template_name = "backend/password_reset_email.txt"
                 c = {
                 "email":Email,
-                'domain':'127.0.0.1:8000',
+                'domain':'ielt.herokuapp.com',
                 'site_name': 'IELTS',
-                'protocol': 'http',
+                'protocol': 'https',
                 "uid": urlsafe_base64_encode(force_bytes(userEmail.pk)),
                 "name":name,
                 "user": userEmail,
