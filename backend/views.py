@@ -183,7 +183,7 @@ class UploadView(APIView):
                     return Response("Invalid header found", status=status.HTTP_400_BAD_REQUEST)
                 return Response("Essay sent", status=status.HTTP_200_OK)
         except:
-            return HttpResponse("Something went wrong", status=400)
+            return Response('error',status=status.HTTP_400_BAD_REQUEST)
         
 class AudioView(APIView):
     permission_classes = [IsAuthenticated]
